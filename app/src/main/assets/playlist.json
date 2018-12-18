@@ -1,0 +1,40 @@
+{
+  "playlistItems": [
+    {
+      "url": "titan2.mp4",
+      "content_type": "video",
+      "title": "titan2.mp4",
+      "uploaded_date": "1486799706803"
+    },
+    {
+      "img_duration": 10,
+      "url": "a16e3550d2a273ebb66eaa050b6c5b48.jpg",
+      "content_type": "image",
+      "title": "a16e3550d2a273ebb66eaa050b6c5b48.jpg",
+      "uploaded_date": "1486799703950"
+    },
+    {
+      "url": "Titan4.mp4",
+      "content_type": "video",
+      "title": "Titan4.mp4",
+      "uploaded_date": "1486799738240"
+    }
+  ,
+    {
+      "url": "TITAN1.MP4",
+      "content_type": "video",
+      "title": "TITAN1.MP4",
+      "uploaded_date": "1486799738240"
+    }
+  ],
+  "banner":{
+    "name": "Welcome to the world of TITAN...",
+    "logo": "a16e3550d2a273ebb66eaa050b6c5b48.jpg",
+    "font_family": "Allan",
+    "font_size": "7",
+    "font_color": "#FF0000",
+    "background_color": "#ffffff",
+    "duration": "8000",
+    "direction": "-1"
+  }
+}

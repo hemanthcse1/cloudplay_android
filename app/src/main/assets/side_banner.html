@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+    <style>
+    li {
+      color:#000;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-align: center;
+      width:100%;
+    }
+
+    body{
+        background-color: #000000;
+    }
+
+
+    </style>
+
+</head>
+<body>
+<marquee id="marquee" width="100%" height="100%" direction="up">
+    <ul id="listItems" style="list-style-type:none;padding:0;">
+
+    </ul>
+</marquee>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+    function updateData(){
+            var data = JSON.parse(window.WebAppInterface.getSideBannerData())
+            $("#listItems").empty();
+            for(var index in data['textList']){
+                $("#listItems").append("<li><span>" + data['textList'][index]['text'] + "</span></li><hr/>");
+            }
+            $("#listItems li span").css("color", data['font_color']);
+            $("ul li span").css("font-size", data['font_size']);
+            $("body").css("background-color", data['background_color'])
+    }
+
+    $( window ).load(function() {
+        updateData();
+    });
+
+</script>
+</body>
+</html>

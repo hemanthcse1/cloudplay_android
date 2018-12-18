@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e_rachit.e_rachitcloudadsplayer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+
+    <application
+        android:name=".CloudAdsPlayerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"/>
+        <activity
+            android:name=".SplashScreenActivity"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Service to receive teh push notification even if the app is closed -->
+        <service
+            android:name=".services.PushNotificationService"
+            android:icon="@drawable/logo"
+            android:label="PushNotificationService"/>
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <receiver android:name=".receivers.ScheduleAlarmReceiver"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cde29216f07e72611ca7486dcc18312ebd6fe66c" />
+    </application>
+
+</manifest>

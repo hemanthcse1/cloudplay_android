@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.e_rachit.e_rachitcloudadsplayer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/player_view_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <VideoView
+                    android:id="@+id/video_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/image_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:visibility="invisible" />
+            <ImageView
+                android:id="@+id/image_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/banner_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip">
+
+        <TextView
+            android:id="@+id/marqueeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setting_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_settings"
+        android:visibility="gone" />
+
+</FrameLayout>
